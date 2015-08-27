@@ -6,4 +6,4 @@ RUN mkdir /home/a-parser
 VOLUME /home/a-parser
 WORKDIR /home/a-parser
 EXPOSE 9091
-ENTRYPOINT exec ./aparser
+ENTRYPOINT touch aparser.log && ./aparser && tail -f aparser.log
